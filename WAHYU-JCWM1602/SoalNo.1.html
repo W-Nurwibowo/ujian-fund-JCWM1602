@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal No.1</title>
+</head>
+<body>
+    
+    <h1>PATERN</h1>
+    <input type="number" id="inputan" placeholder="Masukan Inputan">
+    <br><br>
+    <input type="button" value="Ganjil" id="ganjil" class="operator" onclick="pattren(this.id)">
+    <input type="button" value="Huruf" id="huruf" class="operator" onclick="pattren(this.id)">
+    <h3 id="printOut" > Result : 
+
+
+
+
+
+
+    </h3>
+
+
+    <script>
+        // let buttonGanjil = document.getElementById('ganjil')
+        // let buttonHuruf = document.getElementById('huruf')
+
+        let print = document.getElementById('printOut')
+
+        function pattren(operator){
+            let inputan =  document.getElementById('inputan').value
+            
+            if(operator == 'ganjil'){
+               
+               
+                let output = ''
+
+                let angkaAwal = 1                
+                for(let i = 1; i <= inputan; i++){
+                    for(let j = 1; j <= inputan; j++){
+                        if(i == 1){
+                            output = `${i} `
+                            angkaAwal = 1
+                        }else{
+                            output += `${angkaAwal+ 2} `
+                            angkaAwal += 2
+                        }
+                        
+                        
+                    }output += `\n`
+                    
+                }
+                console.log(output)
+                document.getElementById('printOut').innerHTML = `${output} \n` 
+
+            }else if(operator == 'huruf'){
+                let Alphabet = 'abcdefghijklmnopqrstuvwxy'
+
+                let output = ''
+                let hurufAwal = Alphabet.indexOf(1)
+                for(let i = 1; i <= inputan; i++){
+                    for(let j = 1; j <= inputan; j++){
+                        if(i == 1){
+                            output = 'b'
+                            hurufAwal = Alphabet.indexOf(1)
+                            console.log(hurufAwal)
+
+                        }else{
+                            output += Alphabet.indexOf(i+2)
+                            hurufAwal[i+2]
+                        }
+
+                    }
+                   output += `\n` 
+                }
+            // console.log(output)
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            <h1>From User</h1>
+        </legend>
+        
+        <input type="text" id="user" placeholder="User Name" class="inputDatauser">
+        <input type="text" id="email" placeholder="User Email" class="inputDatauser">
+        <select name="Role" id="opsi" class="inputDatauser">
+            <option value="user" id="id1">User</option>
+            <option value="admin" id="id2">Admin</option>
+    
+        </select>
+        <br><br><br>
+
+        <input type="button" id="buttonInput" value="ADD USER" class="inputDatauser">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h1>DATA USER</h1>
+        </legend>
+
+        <Table id="tabelDataUser" border="1" >
+            
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                      <!-- isi data user --> 
+            </tbody>
+
+        </Table>
+
+
+    </fieldset>
+
+    
+    <script src="dataBase.js"></script>
+    <script src="dataUser.js"></script>
+</body>
+</html>
+
+<center></center>
